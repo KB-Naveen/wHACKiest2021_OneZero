@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Job</title>
+</head>
+<body>
+<h1>Create Job</h1>
+<div>
+        <form method="POST" action="/create/submit">
+             {% csrf_token %}
+        <div class="cname">
+            <h2>Company Name</h2>
+            <input maxlength="1000" name="cname" placeholder="Company Name" required>
+        </div>
+        <div class="title">
+            <h2>Title</h2>
+            <input maxlength="1000" name="title" placeholder="Title" required>
+        </div>
+        <div class="description">
+            <h2>Write your job description <span>(write within 50000 characters)</span></h2>
+            <textarea maxlength="50000" name="description" placeholder="Write somthing here...." required></textarea>
+        </div>
+        <p><span>*</span>all fields in the form are required</p>
+        <button type="submit">SUBMIT FEEDBACK</button>
+        </form>
+</div>
+</body>
+</html>

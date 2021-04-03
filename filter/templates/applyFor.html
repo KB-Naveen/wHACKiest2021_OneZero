@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>You are applying for {{job.title}} offered by {{job.companyName}}</h2>
+<form action="/upload/"
+      method="post"
+      enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="fallback">
+        <lable>Enter Your Name :</lable>
+        <input name="name" type="text"  placeholder="You Name"/>
+        <input name="id" type="number" value="{{job.id}}" style="display:None;" />
+        <input name="file" type="file"/>
+        <input type="submit"/>
+    </div>
+</form>
+</body>
+</html>

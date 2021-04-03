@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <title>CV Ranker</title>
+</head>
+<style>
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: azure;
+    }
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .atag {
+        width: 300px;
+        height: 200px;
+        border: darkblue;
+        border-style: solid;
+        display: flex;
+        align-items: center;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 27px;
+        font-weight: lighter;
+        width: 100%;
+    }
+
+    .box>a>div {
+        width: 100%;
+    }
+
+
+    .atag :hover {
+        background: darkblue;
+        color: white;
+        font-weight: initial;
+    }
+</style>
+
+<body>
+    <h1> Welcome To CV Ranker Website</h1>
+    <div class="box">
+        <a href="/apply/" class="atag">
+            <div>
+                <h3>Apply For Job</h3>
+            </div>
+
+        </a>
+        <a href="/create/" class="atag">
+            <div>
+                <h3>Create a job</h3>
+            </div>
+
+        </a>
+        <a href="/rank/" class="atag">
+            <div>
+                <h3>Rank Bulk of Resumes(CVs)</h3>
+            </div>
+
+        </a>
+    </div>
+</body>
+
+</html>
