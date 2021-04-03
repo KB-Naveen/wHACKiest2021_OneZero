@@ -1,6 +1,9 @@
 # wHACKiest2021_OneZero
 CodeRIT’s “ wHACKiest 2021 ”, the annual Intra college hackathon
 
+# Topic :
+Resume filtering and ranking using NLP
+
 # Recorded Video Link:
 https://drive.google.com/file/d/1H0FSgCIVKS5wLVYPdSQE4Bq7v56cMys4/view?usp=sharing
 (Watch in 720p for more visibility)
