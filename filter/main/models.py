@@ -13,7 +13,8 @@ class Job(models.Model) :
 
 class Application(models.Model):
     name = models.CharField(max_length=1000, default='Applicant Name')
-    resume = models.FileField(upload_to="raw")
+    jobId = models.IntegerField(default=0)
+    resume = models.FileField(upload_to="original")
 
     def __str__(self):
         return self.name

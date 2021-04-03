@@ -3,10 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Job</title>
+    <style>
+    * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    h1{
+    text-align: center;
+    }
+
+.main_area {
+    margin-left: 25px;
+    width:fit-content;
+    margin:0 auto;
+}
+
+.note {
+    margin-top: 30px;
+}
+
+form > div {
+    margin-top: 30px;
+}
+
+.type div {
+    margin-left: 20px;
+}
+
+.main_area h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description textarea {
+    margin-left: 20px;
+    width: 400px;
+    height: 200px;
+}
+
+.fullname input, .email input {
+    width: 300px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+form > button {
+    margin-top: 50px;
+    width: 175px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #267a6b;
+    color: #ffffff;
+    border: none;
+    box-shadow: 3px 3px 20px #267a6b;
+}
+
+form p {
+    margin-top: 20px;
+}
+
+span {
+    color: #ff0000;
+}
+
+input {
+    width: 350px;
+    height: 25px;
+    margin-left: 20px;
+}
+
+.box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top : 10px;
+    }
+
+    .atag {
+        width: 250px;
+        height: 40px;
+        border: white;
+        background-color: darkblue;
+        border-style: solid;
+        display: flex;
+        align-items: center;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: lighter;
+        width: 100%;
+        color:white;
+    }
+
+    .box>a>div {
+        width: 100%;
+    }
+
+    </style>
 </head>
 <body>
-<h1>Create Job</h1>
-<div>
+<h1>Create A Job</h1>
+<div class="box">
+    <a href="/apply/" class="atag">
+        <div>
+            <h3>Apply For Job</h3>
+        </div>
+
+    </a>
+    <a href="/create/" class="atag">
+        <div>
+            <h3>Create a job</h3>
+        </div>
+
+    </a>
+    <a href="/rank/" class="atag">
+        <div>
+            <h3>Rank Bulk of Resumes(CVs)</h3>
+        </div>
+
+    </a>
+</div>
+<div class="main_area">
+
         <form method="POST" action="/create/submit">
              {% csrf_token %}
         <div class="cname">
@@ -22,7 +144,7 @@
             <textarea maxlength="50000" name="description" placeholder="Write somthing here...." required></textarea>
         </div>
         <p><span>*</span>all fields in the form are required</p>
-        <button type="submit">SUBMIT FEEDBACK</button>
+        <button type="submit">Create Job</button>
         </form>
 </div>
 </body>

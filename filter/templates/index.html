@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
     <title>CV Ranker</title>
 </head>
 <style>
@@ -30,12 +31,15 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top : 100px;
     }
 
     .atag {
         width: 300px;
         height: 200px;
-        border: darkblue;
+        border: white;
+        background : darkblue;
+        color : white;
         border-style: solid;
         display: flex;
         align-items: center;
@@ -44,7 +48,6 @@
     h3 {
         text-align: center;
         font-size: 27px;
-        font-weight: lighter;
         width: 100%;
     }
 
@@ -52,11 +55,14 @@
         width: 100%;
     }
 
-
-    .atag :hover {
-        background: darkblue;
-        color: white;
-        font-weight: initial;
+    .myname  {
+        margin-top: 50px;
+        text-align: center;
+        font-size : 25px;
+        font-weight: 600;
+    }
+    #heart {
+        font-size:32px;
     }
 </style>
 
@@ -81,7 +87,34 @@
             </div>
 
         </a>
+        <a href="/match/" class="atag">
+            <div>
+                <h3>Match Your CV with Job</h3>
+            </div>
+
+        </a>
     </div>
+    <p class="myname" style="">Created with <span id="heart" style="color: blanchedalmond;">❤</span> by Team One_Zero</p>
+    <img style="
+    display: block;
+    margin: 10px auto;" src="{% static 'images/logo.png' %}">
+    <script>
+        function color_change(){
+        setTimeout(() => {
+
+        var colors = ['AliceBlue', 'AntiqueWhite', 'Aqua', 'Aquamarine', 'Azure', 'Beige', 'Bisque', 'Black', 'BlanchedAlmond', 'Blue', 'BlueViolet', 'Brown', 'BurlyWood', 'CadetBlue', 'Chartreuse', 'Chocolate', 'Coral', 'CornflowerBlue', 'Cornsilk', 'Crimson', 'Cyan', 'DarkBlue', 'DarkCyan', 'DarkGoldenRod', 'DarkGray', 'DarkGrey', 'DarkGreen', 'DarkKhaki', 'DarkMagenta', 'DarkOliveGreen', 'DarkOrange', 'DarkOrchid', 'DarkRed', 'DarkSalmon', 'DarkSeaGreen', 'DarkSlateBlue', 'DarkSlateGray', 'DarkSlateGrey', 'DarkTurquoise', 'DarkViolet', 'DeepPink', 'DeepSkyBlue', 'DimGray', 'DimGrey', 'DodgerBlue', 'FireBrick', 'FloralWhite', 'ForestGreen', 'Fuchsia', 'Gainsboro', 'GhostWhite', 'Gold', 'GoldenRod', 'Gray', 'Grey', 'Green', 'GreenYellow', 'HoneyDew', 'HotPink', 'IndianRed ', 'Indigo  ', 'Ivory', 'Khaki', 'Lavender', 'LavenderBlush', 'LawnGreen', 'LemonChiffon', 'LightBlue', 'LightCoral', 'LightCyan', 'LightGoldenRodYellow', 'LightGray', 'LightGrey', 'LightGreen', 'LightPink', 'LightSalmon', 'LightSeaGreen', 'LightSkyBlue', 'LightSlateGray', 'LightSlateGrey', 'LightSteelBlue', 'LightYellow', 'Lime', 'LimeGreen', 'Linen', 'Magenta', 'Maroon', 'MediumAquaMarine', 'MediumBlue', 'MediumOrchid', 'MediumPurple', 'MediumSeaGreen', 'MediumSlateBlue', 'MediumSpringGreen', 'MediumTurquoise', 'MediumVioletRed', 'MidnightBlue', 'MintCream', 'MistyRose', 'Moccasin', 'NavajoWhite', 'Navy', 'OldLace', 'Olive', 'OliveDrab', 'Orange', 'OrangeRed', 'Orchid', 'PaleGoldenRod', 'PaleGreen', 'PaleTurquoise', 'PaleVioletRed', 'PapayaWhip', 'PeachPuff', 'Peru', 'Pink', 'Plum', 'PowderBlue', 'Purple', 'RebeccaPurple', 'Red', 'RosyBrown', 'RoyalBlue', 'SaddleBrown', 'Salmon', 'SandyBrown', 'SeaGreen', 'SeaShell', 'Sienna', 'Silver', 'SkyBlue', 'SlateBlue', 'SlateGray', 'SlateGrey', 'Snow', 'SpringGreen', 'SteelBlue', 'Tan', 'Teal', 'Thistle', 'Tomato', 'Turquoise', 'Violet', 'Wheat', 'White', 'WhiteSmoke', 'Yellow', 'YellowGreen'];
+
+        var heart = document.getElementById('heart');
+        heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+
+        color_change();
+
+        }, 100);
+
+    };
+
+    color_change();
+    </script>
 </body>
 
 </html>

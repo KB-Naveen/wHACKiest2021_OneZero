@@ -26,5 +26,8 @@ urlpatterns = [
     path('apply/',views.apply),
     url(r'^applyFor/(?P<id>\d+)$', views.applyFor, name='edit'),
     path('rank/',views.rank),
+    path('rank/rankings',views.rankings),
     path('upload/',views.upload),
+    path('match/',views.match),
+    path('match/done',views.matched),
 ]
